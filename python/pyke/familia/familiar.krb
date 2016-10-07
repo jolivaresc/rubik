@@ -1,0 +1,39 @@
+
+mother_of
+  foreach
+    familia.parent_of($mother,$child)
+    familia.female($mother) 
+  assert 
+    familia.mother_of($mother,$child)
+
+grandparent_of
+  foreach
+    familia.parent_of($grandparent,$parent)
+    familia.parent_of($parent,$child)
+  assert
+    familia.grandparent_of($grandparent,$child)
+
+sister_of
+  foreach
+    familia.parent_of($parent,$sister)
+    familia.parent_of($parent,$child)
+    familia.female($sister)
+    check $sister != $child
+  assert
+    familia.sister_of($sister,$child)
+
+ancestor_of
+  foreach
+    familia.parent_of($ancestor,$person)
+  assert
+    familia.ancestor_of($ancestor,$person)
+
+ancestor_of2
+  foreach
+    familia.parent_of($ancestor,$parent)
+    familia.ancestor_of($parent,$person)
+  assert
+    familia.ancestor_of($ancestor,$person)
+    
+
+

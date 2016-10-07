@@ -1,0 +1,16 @@
+
+parent_of(pam,bob)
+parent_of(tom,bot)
+parent_of(tom,liz)
+parent_of(bob,ann)
+parent_of(bob,pat)
+parent_of(pat,jim)
+
+female(pam)
+male(tom)
+male(bob)
+female(liz)
+female(ann)
+female(pat)
+male(jim)
+
